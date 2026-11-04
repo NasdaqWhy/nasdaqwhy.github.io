@@ -48,4 +48,6 @@ td:not(:first-child),th:not(:first-child){text-align:right}
   table{font-size:13px}
   th,td{padding:7px 5px}
 }
+footer .links a{color:inherit;margin-right:2px}
+article h2,main h2{font-size:17px;margin:22px 0 6px}
 footer{border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px;padding:18px 0 32px}
