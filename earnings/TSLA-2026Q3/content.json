@@ -93,6 +93,18 @@
  "name": "テスラ",
  "ticker": "TSLA",
  "quarter": "2026年7〜9月期",
+ "relations": {
+  "peers": [
+   "AAPL",
+   "MSFT",
+   "GOOGL",
+   "AMZN",
+   "META",
+   "NVDA"
+  ],
+  "customers": [],
+  "peers_title": "マグニフィセント7の中で比べると"
+ },
  "video": {
   "guidance_band": "残り3か月で約120億ドル",
   "desc3": "③ 設備投資の重さ：売上の約17%（1年前は約8%）。設備投資は47億ドルで前年の約2.1倍",
