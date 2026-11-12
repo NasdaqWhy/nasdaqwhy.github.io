@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TikTok 連携｜NasdaqWhy</title>
+<style>
+body{font-family:system-ui,-apple-system,"Hiragino Sans","Meiryo",sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#1b2333;background:#fff;line-height:1.7}
+code{display:block;word-break:break-all;background:#f1f3f7;padding:12px;border-radius:8px;font-size:15px}
+button{margin-top:10px;padding:10px 16px;border:0;border-radius:8px;background:#1f4e79;color:#fff;font-size:15px}
+.muted{color:#667}
+</style></head>
+<body>
+<h1>NasdaqWhy × TikTok</h1>
+<p>このページは、NasdaqWhy の運営者が、自分の TikTok アカウントに動画を投稿するための連携に使うページです。</p>
+<div id="box"></div>
+<p class="muted">This page is used only by the owner of NasdaqWhy to connect our own TikTok account. No data is stored on this page.</p>
+<p><a href="../">NasdaqWhy のトップへ</a>・<a href="../privacy/">プライバシーポリシー</a>・<a href="../terms/">利用規約</a></p>
+<script>
+var p = new URLSearchParams(location.search);
+var box = document.getElementById("box");
+if (p.get("code")) {
+  box.innerHTML = '<p>連携の許可ができました。次のコードを、PC の黒い画面（TikTok登録.bat）に貼り付けてください。<b>このコードは他の人に見せないでください。</b></p><code id="c"></code><button id="b">コピー</button>';
+  document.getElementById("c").textContent = p.get("code");
+  document.getElementById("b").onclick = function () { navigator.clipboard.writeText(p.get("code")); this.textContent = "コピーしました"; };
+} else if (p.get("error")) {
+  box.innerHTML = '<p>連携できませんでした：<span id="e"></span></p>';
+  document.getElementById("e").textContent = p.get("error") + " " + (p.get("error_description") || "");
+} else {
+  box.innerHTML = '<p class="muted">（連携の手続きをすると、ここにコードが表示されます）</p>';
+}
+</script>
+</body></html>
