@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIの推論は安くなっているのに、なぜ設備への支出は増えるのか？――ブロードコムのAI半導体は1年で約3倍に（ニュースの深掘り）｜NasdaqWhy</title>
+<meta name="description" content="AIに質問して答えを出させる計算（推論）の値段は、この3年で約300分の1になりました。それなのに、Amazon・Alphabet・Microsoft・Metaの大手4社は、2026年に合わせて約7,">
+<meta property="og:title" content="AIの推論は安くなっているのに、なぜ設備への支出は増えるのか？――ブロードコムのAI半導体は1年で約3倍に（ニュースの深掘り）｜NasdaqWhy">
+<meta property="og:description" content="AIに質問して答えを出させる計算（推論）の値段は、この3年で約300分の1になりました。それなのに、Amazon・Alphabet・Microsoft・Metaの大手4社は、2026年に合わせて約7,">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="NasdaqWhy">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://nasdaqwhy.github.io/feature/inference-broadcom/">
+<link rel="canonical" href="https://nasdaqwhy.github.io/feature/inference-broadcom/">
+<meta property="og:image" content="https://nasdaqwhy.github.io/feature/inference-broadcom/map.png">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../../">Nasdaq<b>Why</b></a>
+<span class="tagline">米国株は、なぜ動いた？ 毎朝の日本語解説</span>
+</div></header>
+<main><div class="wrap">
+
+<article>
+<p class="lead">ニュースの深掘り</p>
+<h1>AIの推論は安くなっているのに、なぜ設備への支出は増えるのか？――ブロードコムのAI半導体は1年で約3倍に</h1>
+<p>AIに質問して答えを出させる計算（推論）の値段は、この3年で約300分の1になりました。それなのに、Amazon・Alphabet・Microsoft・Metaの大手4社は、2026年に合わせて約7,300億ドルを設備に投じる計画です。なぜ安くなるのに、お金はもっと使われるのか。専用チップを作るブロードコムの急成長と、データセンターの変化から見ていきます。</p>
+<img src="map.png" alt="推論が安くなるほど、設備が足りなくなるしくみ">
+<h2>推論の値段は、3年で約300分の1に</h2><p>AIには2つの計算があります。AIを作るための「学習」と、できあがったAIに質問して答えを出させる「推論」です。毎日AIを使うたびに動いているのは、推論のほうです。</p><p>この推論の値段が、急激に下がっています。GPT-4と同じくらいの性能の答えを出す値段は、2023年3月から約300分の1になりました（a16z・スタンフォード大学・Epoch AIのデータをまとめたWing VCの分析）。研究機関のEpoch AIによると、博士レベルの理科の問題でGPT-4並みの成績を出す値段は、1年で40分の1のペースで下がりました。ただし下がり方は問題の種類によって大きく違い、1年で9分の1〜900分の1と幅があります。</p><h2>AIを作る「学習」は、逆に高くなっている</h2><p>一方で、最先端のAIを作る「学習」の費用は、毎年大きくなっています。Epoch AIの分析では、最先端のモデルの学習費用は2016年から毎年約2.4倍のペースで増えてきました（2024年の分析）。2026年の集計では、2020年以降は毎年約3.5倍とさらに速まっています。学習に使う計算の量も、2020年から毎年約5倍に増えています。</p><p>つまり、AIを「使う」値段は下がり、「作る」費用は上がる。はさみのように逆向きに動いているのです。</p><img src="図1_推論と学習のはさみ.png" alt="推論は安く、学習は高く"><h2>それでも、大手4社の設備投資は増え続ける</h2><p>推論が安くなれば、設備へのお金は少なくて済みそうに思えます。ところが現実は逆です。Amazon・Alphabet・Microsoft・Metaの4社は、2026年に合わせて約7,300億ドルを設備に投じる計画です（各社の見通しをまとめた valueaddvc の集計、2026年10月末時点）。</p><p>Alphabetは2026年4〜6月期に、四半期の設備投資が449億ドルと前の年の約2倍になり、本業で稼いだお金から投資を引いた現金（フリーキャッシュフロー）が、上場以来初めてマイナス（−59億ドル）になりました（Tom&#x27;s Hardware）。</p><img src="図2_大手4社の設備投資.png" alt="大手4社の2026年の設備投資の計画"><h2>なぜ？――安くなると、使う量がもっと増えるから</h2><p>理由は、値段が下がると使う量がそれ以上に増えるからです。LED電球で1個あたりの電気代は下がりましたが、明かりを使う場所が増え、電気の使用量は減りませんでした。AIでも同じことが起きています。</p><p>特に「エージェント」と呼ばれる、AIが何度も考え直しながら仕事を進める使い方では、1つの仕事に使う計算の量が大きく増えます。さらに、学習の費用も上がり続けているので、作る側と使う側の両方で、計算の設備が必要になっています。</p><h2>「学習はGPU、推論は専用チップ」とは限らない</h2><p>よく「学習はエヌビディアのGPU、推論は専用チップ」と言われますが、実際はそう単純ではありません。グーグルの最新のAI「Gemini 3 Pro」は、自社の専用チップ（TPU）で学習しました（グーグルの公式資料）。Anthropicは、グーグルのTPU、アマゾンのTrainium、エヌビディアのGPUの3種類のチップを使い分けていると説明しています。</p><p>ただし、自分で専用チップを設計できるのは、グーグル・アマゾン・マイクロソフト・メタ・OpenAIのような超大手だけです。台湾の調査会社TrendForceは、2026年の専用チップ（ASIC）の出荷が前の年より44.6%増え、GPUの16.1%増の約3倍の伸びになると予測しています。専用チップを使うAIサーバーは、2026年に出荷全体の27.8%になる見込みです。</p><h2>専用チップのブロードコムが伸びる理由</h2><p>エヌビディアのGPUは、どんな計算もこなせる「万能の道具」です。これに対して、ブロードコムが大手IT企業と一緒に設計する専用チップは、決まった計算だけに絞ることで、電気代とコストを下げます。グーグルのTPUがその代表例です。推論は毎日同じ種類の計算をくり返すので、専用チップの強みが出やすい分野です。</p><p>ブロードコムの2026年5〜7月期のAI半導体の売上は167億ドルで、前の年の約3倍（+221%）、前の四半期からも+54%でした。次の8〜10月期は217億ドル（+236%）を見込んでいます。ホック・タンCEOは、専用チップとネットワーク用のチップの需要が「とても強い」と説明しています。比べると、エヌビディアのデータセンター部門の売上は8〜10月期で1,076億ドル。規模はまだエヌビディアが大きいものの、伸びの速さではブロードコムが上回っています。</p><img src="図3_ブロードコムのAI半導体.png" alt="ブロードコムのAI半導体の売上"><h2>データセンターは「学習用」と「推論用」に分かれていく？</h2><p>電力の使い方も変わります。日立エナジーが紹介したMcKinseyの予測では、世界のAIデータセンターの電力は、推論が2025年の20.9GWから2030年に93.3GWへ、学習が23.1GWから62.2GWへ増えます。2030年には、推論が学習を上回る見込みです。</p><p>置く場所の考え方も違います。学習用の施設は、電力を確保しやすい郊外の巨大な敷地が向いていて、利用者から遠くてもかまいません。推論用の施設は、答えをすぐ返すために、大都市の近くの通信網が強い場所に分散して置かれる傾向があります。今のデータセンターがすべて役割で分かれているわけではありませんが、新しく建てる施設では、役割に合わせて場所を選ぶ動きが出ています（同じブログより）。</p><img src="図4_推論と学習の電力.png" alt="推論と学習の電力"><h2>この先の2つのシナリオ</h2><ul><li>使う量が増え続けるシナリオ：エージェントの利用が広がり、推論の計算が増え続けます。設備投資も続き、GPUと専用チップの両方が伸びます。電力や送電の設備の需要も大きくなります。</li><li>投資を見直すシナリオ：AIで稼ぐお金が投資の増え方に追いつかず、手元の現金がマイナスの状態が続きます。大手が投資のペースを落とすと、半導体の会社の売上の伸びも鈍ります。</li></ul><h2>投資家にとっての意味と、次に見るもの</h2><p>「推論が安くなる＝AI関連の需要が減る」とは限りません。むしろ、安くなるほど使う量が増え、設備投資が増えてきました。見るべきなのは、値段の下がり方よりも、使う量がどこまで増えるか、そしてAIで稼ぐお金が投資に追いつくかです。</p><p>次に見るもの：ブロードコムの8〜10月期の決算（12月中旬の見込み）で、AI半導体が見通しの217億ドルに届くか。大手4社が来年1〜2月の決算で出す2027年の設備投資の計画。</p>
+<p>次回からの予定：「エヌビディアの売上から、なぜシンガポールが消えた？」→「GPUは何年使える？減価償却でクラウド大手の利益はどう変わる？」→「AIの電気は誰が作る？（発電）」→「発電所より先に足りないもの：送電線と変圧器」→「サーバーを水で冷やす？寒い国と宇宙のデータセンター」の順に、AIを支える設備の「なぜ？」を深掘りします。</p>
+
+<h2>出典</h2><ul class="lead"><li><a href="https://www.wing.vc/content/who-makes-money-when-inference-gets-10x-cheaper" target="_blank" rel="noopener">Wing VC：Who Makes Money When Inference Gets 10x Cheaper?（2026年8月）</a></li><li><a href="https://epoch.ai/data-insights/llm-inference-price-trends" target="_blank" rel="noopener">Epoch AI：LLM inference price trends（2025年3月）</a></li><li><a href="https://epoch.ai/blog/how-much-does-it-cost-to-train-frontier-ai-models" target="_blank" rel="noopener">Epoch AI：How much does it cost to train frontier AI models?（2024年6月）</a></li><li><a href="https://epoch.ai/research/ai-and-compute" target="_blank" rel="noopener">Epoch AI：AI trends（2026年2月更新）</a></li><li><a href="https://valueaddvc.com/ai-spending" target="_blank" rel="noopener">valueaddvc：Big Tech AI Spending 2026（各社の設備投資の見通しの集計）</a></li><li><a href="https://www.tomshardware.com/tech-industry/big-tech/alphabet-goes-cash-flow-negative-for-the-first-time-as-ai-capex-doubles-to-44-9-billion-in-a-single-quarter" target="_blank" rel="noopener">Tom&#x27;s Hardware：Alphabet goes cash flow negative for the first time（2026年7月）</a></li><li><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf" target="_blank" rel="noopener">Google DeepMind：Gemini 3 Pro Model Card</a></li><li><a href="https://www.theregister.com/2025/10/23/google_anthropic_deal/" target="_blank" rel="noopener">The Register：Google and Anthropic TPU deal（Anthropicの3種類のチップ）</a></li><li><a href="https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia" target="_blank" rel="noopener">Tom&#x27;s Hardware：The custom AI ASIC state of play（TrendForce の予測、2026年5月）</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000076/avgo-08022026x8kxex99.htm" target="_blank" rel="noopener">Broadcom：2026年度第3四半期の決算発表（SEC 8-K、2026年9月2日）</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm" target="_blank" rel="noopener">NVIDIA：2027年度第3四半期の決算発表（SEC 8-K、2026年11月17日）</a></li><li><a href="https://www.hitachienergy.com/news-and-events/blogs/2026/06/ai-data-centers-2030-2035-the-power-shift" target="_blank" rel="noopener">日立エナジー：AI data centers 2030–2035: the power shift（2026年6月）</a></li></ul>
+<div class="notice">※情報提供のみ。投資判断はご自身でお願いします。※Nasdaq Whyは独立した情報メディアです。Nasdaq, Inc.およびその関連会社とは関係ありません。</div>
+</article>
+<div class="nav"><a href="../../">← 記事の一覧へ</a></div>
+
+</div></main>
+<footer><div class="wrap">
+<p>※情報提供のみ。投資判断はご自身でお願いします。※Nasdaq Whyは独立した情報メディアです。Nasdaq, Inc.およびその関連会社とは関係ありません。</p>
+<p>数値は無料の公開データ（Yahoo Finance）から自動で取得しています。正確さには注意していますが、誤りや遅れを含む場合があります。</p>
+<p class="links"><a href="../../about/">このサイトについて</a>　<a href="../../privacy/">プライバシーポリシー</a>　<a href="../../contact/">お問い合わせ</a></p>
+<p>&copy; 2026 NasdaqWhy</p>
+</div></footer>
+</body>
+</html>
