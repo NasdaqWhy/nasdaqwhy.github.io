@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>電力不足だけではない――AIデータセンターが電力網を揺るがす理由（AIインフラの限界2）｜NasdaqWhy</title>
+<meta name="description" content="480MW。
+2026年6月6日、アイルランドで送電設備の故障に伴い、データセンター需要が一斉に減少した。
+その規模は、当時のデータセンター総需要の約52%に相当する。
+アイルランドの送電網運営会社E">
+<meta property="og:title" content="電力不足だけではない――AIデータセンターが電力網を揺るがす理由（AIインフラの限界2）｜NasdaqWhy">
+<meta property="og:description" content="480MW。
+2026年6月6日、アイルランドで送電設備の故障に伴い、データセンター需要が一斉に減少した。
+その規模は、当時のデータセンター総需要の約52%に相当する。
+アイルランドの送電網運営会社E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="NasdaqWhy">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://nasdaqwhy.github.io/feature/ai-power-02/">
+<link rel="canonical" href="https://nasdaqwhy.github.io/feature/ai-power-02/">
+<meta property="og:image" content="https://nasdaqwhy.github.io/feature/ai-power-02/map.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../../">Nasdaq<b>Why</b></a>
+<span class="tagline">米国株は、なぜ動いた？ 毎朝の日本語解説</span>
+</div></header>
+<main><div class="wrap">
+
+<article>
+<p class="lead">AIインフラの限界 第2回</p>
+<h1>電力不足だけではない――AIデータセンターが電力網を揺るがす理由</h1>
+<p>480MW。
+2026年6月6日、アイルランドで送電設備の故障に伴い、データセンター需要が一斉に減少した。
+その規模は、当時のデータセンター総需要の約52%に相当する。
+アイルランドの送電網運営会社EirGridが2026年6月26日に公表した報告書によると、この事例は同社がそれまでに経験した系統故障に伴うデータセンターの需要減少事例の中で最大だった。
+電力を大量に消費するデータセンターが、突然、電力を使わなくなる。
+電力不足が問題となっている中で、なぜ消費電力の減少が電力網にとって危険なのだろうか。
+ここに、AIインフラの拡大を考えるうえで重要な技術的課題がある。</p>
+<img src="map.png" alt="電力網からGPUまで、一体で考える">
+<h2>1．電力は発電すればよいわけではない</h2><p>電力網は、発電と消費のバランスを常に維持する必要がある。</p><p>発電量が消費量を下回れば、電力系統の周波数は低下する方向に動く。</p><p>反対に、消費量が突然減少すれば、発電側が一時的に過剰となり、周波数が上昇する方向に動く。</p><p>電力網の運営会社は、発電設備や蓄電池、需給調整の仕組みなどを利用して、このバランスを維持している。</p><p>データセンターの増加は、こうした調整に新しい課題をもたらす。</p><img src="fig04.png" alt="図4：発電できても、届けられるとは限らない"><p>発電量を増やすこと。</p><p>送電能力を増やすこと。</p><p>電力網の安定性を維持すること。</p><p>この3つは、それぞれ異なる問題だ。</p><p>第1回で紹介したノルウェーのデータセンター規制も、発電量だけでは説明できない。</p><h2>2．AIデータセンターは従来型と何が違うのか</h2><p>従来型のデータセンターも、利用状況によって電力消費が変化する。</p><p>ただし、異なる利用者や処理が分散して実行されていれば、施設全体の負荷変動がある程度相殺される場合がある。</p><p>一方、大規模なAI学習では、数千、場合によっては数万基のGPUを連携させて処理を行う。</p><p>それぞれのGPUが独立して作業するのではなく、同じ学習処理のために同期して動作する。</p><p>典型的な分散学習では、次のような処理が繰り返される。</p><p>① GPUで大量の計算を実行する。</p><p>② 複数のGPU間で計算結果を交換する。</p><p>③ 計算結果を集約・同期する。</p><p>④ 次の計算処理に進む。</p><p>このような計算と通信の切り替えが多数のGPUで同時に起きると、電力消費の変化が重なる可能性がある。</p><img src="fig05.png" alt="図5：AI学習の同期処理と電力負荷（概念図）"><p>図は、この仕組みを説明するための概念図であり、特定のデータセンターで測定した実際の波形ではない。</p><p>実際の変動幅や変動速度は、AIモデル、GPUの構成、通信方式、電源設備、ソフトウェア制御などによって異なる。</p><p>AI推論についても、利用量や処理の集中状況によって負荷が変動するため、常に一定の電力を消費するとは限らない。</p><h2>3．電力網から半導体チップまで一体で考える</h2><p>2026年9月に公開された研究論文『From Grid to Chip: Power Architecture, Stability, and Flexibility of AI Data Centers』は、AIデータセンターを電力網と相互に作用する計算システムとして捉えている。</p><p>この論文では、電力の利用可能性や系統接続容量だけでなく、ラック内部の電源、施設内の電力制御、電力網との相互作用までを一体として考える必要性が示されている。</p><p>AIの計算能力を増やすためには、半導体の性能向上だけでは不十分だ。</p><p>以下の各段階が連携する必要がある。</p><ul><li>GPU・CPUなどの半導体</li><li>サーバー・AIラック</li><li>ラックへの給電システム</li><li>UPS・蓄電設備</li><li>データセンター内の変電・配電設備</li><li>外部の送電網</li><li>発電設備</li></ul><p>半導体の性能向上によってラックの電力密度が高まれば、給電、冷却、電力制御など、周辺インフラにも新たな設計が必要になる。</p><p>AI産業は、情報技術だけでなく、電力エンジニアリングの産業でもあるのだ。</p><h2>4．アイルランドで発生した480MWの一斉負荷離脱</h2><p>AI計算によって発生する負荷変動とは別に、電力網の故障に対するデータセンターの反応も問題になっている。</p><p>アイルランドの事例を見てみよう。</p><div class="table-scroll"><table class="tw"><tr><th>発生日</th><th>データセンター需要の減少</th><th>データセンター総需要に占める減少割合</th></tr><tr><td>2025年1月26日</td><td>321MW</td><td>約44%</td></tr><tr><td>2025年5月8日</td><td>387MW</td><td>約52%</td></tr><tr><td>2026年6月6日</td><td>480MW</td><td>約52%</td></tr></table></div><p>出典：EirGrid公式報告書（2026年6月26日、第3.4節、p.10）。AEMCの2026年11月12日付資料にも同じ数値が記載されている。</p><p>3事例はいずれも、送電設備の故障に関連してデータセンター需要が減少したものだ。</p><p>EirGridの報告書によると、2026年6月6日の480MWは、同社がそれまでに経験した事例の中で最大だった。</p><p>データセンターには、停電や電圧低下が発生した場合にもコンピューターの稼働を維持するため、UPSや非常用電源などのバックアップ設備が設けられている。</p><p>施設側から見ると、バックアップ電源への切り替えは重要な保護動作である。</p><p>しかし、多数のデータセンターが同時に系統からの受電を減らした場合、電力網全体では大量の需要が突然消失することになる。</p><img src="fig06.png" alt="図6：系統故障で大口需要が一斉に離脱（概念図）"><p>重要なのは、施設の安全を守るための動作が、電力網全体の安定性に影響する可能性があることだ。</p><p>なお、480MWという数字は一般家庭への停電規模ではない。</p><p>また、AI学習によるGPUの負荷変動がこの送電設備の故障を引き起こしたという意味でもない。</p><p>次の2つの現象を明確に区別する必要がある。</p><p>A：AIデータセンター内部の計算処理による負荷変動。</p><p>B：外部の系統故障に伴う複数施設の同時負荷離脱。</p><p>両方に対応するためには、施設内の電力制御と外部の系統運用を連携させることが重要になる。</p><h2>5．データセンターにも系統を支える能力が求められる</h2><p>アイルランドの規制当局CRUは、2026年9月22日、系統連系規程の改定「MPID 345」を承認した。</p><p>新しい技術要件は5週間後の10月27日に発効した。</p><p>主な内容は3つある。</p><p>【Fault Ride-Through（FRT）】</p><p>短時間の電圧低下などの系統異常が発生しても、一定条件のもとで電力網への接続を維持する能力。</p><p>【Active Power Recovery（APR）】</p><p>故障が解消した後、必要な有効電力を適切に回復させる能力。</p><p>【Rate of Change of Frequency（RoCoF）】</p><p>電力系統の周波数の急激な変化に耐える能力。</p><p>これらは、現在および将来の送電網接続需要設備を対象としている。</p><p>既存施設についても、技術要件に適合するための移行・例外承認の枠組みが設けられている。</p><p>従来、こうした系統故障時の運転継続に関する技術要件は、主に発電設備側に課されてきた。</p><p>大型データセンターの増加に伴い、電力を消費する側にも、系統の安定性を損なわない能力が求められている。</p><h2>6．新たに重要になる電力制御技術</h2><p>こうした課題を解決するため、AIデータセンターには従来以上の電力制御技術が必要になる。</p><p>【蓄電池・UPS】</p><p>施設内の負荷変動の一部を蓄電設備で吸収し、外部電力網から見た負荷の変化を緩和する。</p><p>ただし、UPSを設置するだけで系統安定性の問題が解決するわけではない。</p><p>系統異常時の動作や電力の回復方法を適切に設計する必要がある。</p><p>【GPUの電力制御】</p><p>GPUの動作電力や処理の実行タイミングを調整し、多数のGPUの負荷変動が同時に集中することを抑える。</p><p>AIの処理性能と電力の安定性を両立する設計が求められる。</p><p>【高電圧直流給電】</p><p>AIラックの高密度化に伴い、800V DCなどの高電圧直流給電方式が注目されている。</p><p>給電効率の向上や高密度化への対応が期待されるが、これも単独で系統の負荷変動を解決する技術ではない。</p><p>【液冷技術】</p><p>高密度AIラックから発生する熱を効率的に除去するため、液冷技術の重要性が高まっている。</p><p>冷却設備を含めた施設全体の電力効率が、AIデータセンターの運用コストや立地条件に影響する。</p><h2>7．データセンターが電力網の調整に参加する時代へ</h2><p>データセンターは、電力網に新しい負担をかける存在である一方、将来的には電力需給の調整に貢献する可能性もある。</p><p>例えば、比較的柔軟なAI学習処理を電力に余裕のある時間帯に移すことや、蓄電設備を利用して外部からの電力需要を調整することなどが考えられる。</p><p>電力供給に余裕のある地域へ計算処理を移す方法もある。</p><p>もちろん、すべてのAI処理にこのような柔軟性があるわけではない。</p><p>利用者への即時応答が求められる推論処理などは、処理を自由に延期できない場合もある。</p><p>AIの利用目的に応じた電力管理が必要になる。</p><h2>Nasdaq Whyの視点</h2><p>AIの成長を考えるとき、GPUの演算能力や消費電力が注目されてきた。</p><p>しかし、今後は電力をどれだけ消費するかだけでなく、どのように消費するかも重要になる。</p><p>GPUの高性能化、大規模クラスタ化、高密度ラック化は、電源、冷却、蓄電、変電設備、電力制御技術の重要性を高める。</p><p>これらの技術がAIデータセンターの新たな競争力につながる可能性がある。</p><p>次回は、この変化がNVIDIAなどの半導体企業、CoreWeaveなどのAIクラウド企業、そして電力設備企業の業績や投資にどのような影響を与え得るのかを分析する。</p>
+<p>次回：電力の制約は、NVIDIAなどの半導体企業・AIクラウド・電力設備企業の業績にどう影響するのか</p>
+<h2>本記事は公開情報に基づく産業・技術動向の分析であり、特定の金融商品の購入・売却を推奨するものではありません。</h2><ul></ul>
+<h2>出典</h2><ul class="lead"><li><a href="https://consult.cru.ie/en/system/files/materials/971/CRU202705%20Fault%20Ride%20Through%2C%20Active%20Power%20Recovery%20%26%20Rate%20of%20Change%20of%20Frequency%20-%20EirGrid%20Update%20including%20Assessment%20of%20System%20Service%20and%20Grid%20Solution%20Alternatives%20%28EirGrid%29.pdf" target="_blank" rel="noopener">EirGrid公式報告書「Fault Ride Through / Active Power Recovery / Rate of Change of Frequency – EirGrid Update including Assessment of System Service / Grid Solution Alternatives」（2026年6月26日、第3.4節、p.10）</a></li><li><a href="https://www.cru.ie/en-ie/publications/29222/" target="_blank" rel="noopener">アイルランド規制当局CRU・MPID 345決定（2026年9月22日）</a></li><li><a href="https://consult.cru.ie/en/consultation/grid-code-modification-mpid-345-and-compliance-and-derogation-framework-request-further-0" target="_blank" rel="noopener">CRU・EirGrid公開協議資料</a></li><li><a href="https://www.aemc.gov.au/sites/default/files/2026-11/final_determination_-_rule_change.pdf" target="_blank" rel="noopener">オーストラリア・エネルギー市場委員会（AEMC）「Improving the NEM access standards – Package 2, Rule determination」（2026年11月12日、Box 2、本文p.3）</a></li><li><a href="https://arxiv.org/abs/2609.11649" target="_blank" rel="noopener">学術論文「From Grid to Chip: Power Architecture, Stability, and Flexibility of AI Data Centers」</a></li><li><a href="https://www.regjeringen.no/en/whats-new/government-seeks-controlled-growth-of-data-centres-in-norway/id3192054/" target="_blank" rel="noopener">ノルウェー政府</a></li></ul>
+<div class="notice">※情報提供のみ。投資判断はご自身でお願いします。※Nasdaq Whyは独立した情報メディアです。Nasdaq, Inc.およびその関連会社とは関係ありません。</div>
+</article>
+<!--seo-related--><section class="related"><h2>関連記事</h2><ul><li><a href="/feature/ai-power-01/">なぜ水力発電大国ノルウェーまでデータセンターを制限するのか？ 世界で始まったAI電力争奪戦（AIインフラの限界1）</a></li><li><a href="/feature/ai-bb-02/">AIデータセンターは本当に儲かるのか？──54億ドルの新契約から読み解くApplied Digitalのビジネスモデル（AI産業のビルディングブロック2）</a></li><li><a href="/feature/dc-backlash/">AIのデータセンター、なぜ住民投票で次々と止められた？――41件中40件が「制限」に（ニュースの深掘り）</a></li></ul></section><!--/seo-related-->
+<div class="nav"><a href="../../">← 記事の一覧へ</a></div>
+
+</div></main>
+<footer><div class="wrap">
+<p>※情報提供のみ。投資判断はご自身でお願いします。※Nasdaq Whyは独立した情報メディアです。Nasdaq, Inc.およびその関連会社とは関係ありません。</p>
+<p>数値は無料の公開データ（Yahoo Finance）から自動で取得しています。正確さには注意していますが、誤りや遅れを含む場合があります。</p>
+<p class="links"><a href="../../about/">このサイトについて</a>　<a href="../../privacy/">プライバシーポリシー</a>　<a href="../../contact/">お問い合わせ</a></p>
+<p>&copy; 2026 NasdaqWhy</p>
+</div></footer>
+</body>
+</html>
