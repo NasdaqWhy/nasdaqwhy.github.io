@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Huaweiの独自HBM、「4096本」の信号線は何を意味するのか？（ニュースの深掘り）｜NasdaqWhy</title>
+<meta name="description" content="AI半導体の性能は、計算するチップだけでは決まらない。計算に使うデータをどれだけ速く届けられるかを左右するのが、GPUのすぐ隣に置かれる積み上げ型のメモリ「HBM」だ。
+中国のHuaweiは、2027">
+<meta property="og:title" content="Huaweiの独自HBM、「4096本」の信号線は何を意味するのか？（ニュースの深掘り）｜NasdaqWhy">
+<meta property="og:description" content="AI半導体の性能は、計算するチップだけでは決まらない。計算に使うデータをどれだけ速く届けられるかを左右するのが、GPUのすぐ隣に置かれる積み上げ型のメモリ「HBM」だ。
+中国のHuaweiは、2027">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="NasdaqWhy">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://nasdaqwhy.github.io/feature/huawei-hbm/">
+<link rel="canonical" href="https://nasdaqwhy.github.io/feature/huawei-hbm/">
+<meta property="og:image" content="https://nasdaqwhy.github.io/feature/huawei-hbm/map.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../../">Nasdaq<b>Why</b></a>
+<span class="tagline">米国株は、なぜ動いた？ 毎朝の日本語解説</span>
+</div></header>
+<main><div class="wrap">
+
+<article>
+<p class="lead">ニュースの深掘り</p>
+<h1>Huaweiの独自HBM、「4096本」の信号線は何を意味するのか？</h1>
+<p>AI半導体の性能は、計算するチップだけでは決まらない。計算に使うデータをどれだけ速く届けられるかを左右するのが、GPUのすぐ隣に置かれる積み上げ型のメモリ「HBM」だ。
+中国のHuaweiは、2027年2月の国際学会で「64チャンネル・4096本」の信号線を持つ独自のHBMを発表する予定だと分かった。米国の輸出規制で海外製の先端HBMを買いにくくなるなか、この数字は何を意味し、何がまだ分からないのか。一次資料で確認できる事実と、推測を分けて整理する。</p>
+<img src="map.png" alt="AIチップの性能を決める3つの要素">
+<h2>1．そもそもHBMとは何か</h2><p>HBM（High Bandwidth Memory、広帯域メモリ）は、記憶用のチップ（DRAM）を縦に何枚も積み上げ、AIチップのすぐ隣に置くメモリだ。パソコンのメモリのように基板の離れた場所に置くのではなく、配線の板（インターポーザー）の上でAIチップと並べることで、データの通り道を短く、太くしている。</p><p>AIの学習や推論では、巨大なモデルの数値を休みなく読み書きする。計算するチップがいくら速くても、データの到着が遅れれば待ち時間が生まれる。このため、HBMの性能と調達量は、AI半導体の競争力そのものに直結している。</p><img src="fig01.png" alt="図1：HBMはGPUのすぐ隣に積み上げたメモリ（概念図）"><p>たとえるなら、HBMは「倉庫（メモリ）と工場（AIチップ）を隣に建て、間に何千本もの搬入口を開けたもの」だ。ただし実際の構造では、層どうしは微細な縦の配線や接合でつながっており、たとえはあくまで役割のイメージである。</p><h2>2．学会資料で確認できる事実</h2><p>半導体回路の分野で権威のある国際学会ISSCCは、2027年2月14〜18日に米サンフランシスコで開かれる。2026年11月26日付の事前プログラムによると、2月16日午後の第22セッション「SRAM、HBM、DRAM」で、Huaweiが論文22.6を発表する。</p><p>論文の題名は「A 64-Channel 4096-DQ Custom HBM with Memory Controllers and 5-Layer Wafer-on-Wafer Hybrid Bonding」。日本語にすると、64チャンネル・4096本のデータ信号線（DQ）を持ち、メモリの制御回路を組み込み、5層をウエハーのまま貼り合わせる「ハイブリッド接合」で作ったカスタムHBM、という意味になる。</p><img src="fig02.png" alt="図2：1つのHBMが持つ独立したデータの通り道（チャンネル）"><p>比べる物差しとして、業界の標準化団体JEDECが2025年4月に発表したHBM4の規格を見ると、データ信号線は2048本、独立したチャンネルは32で、前の世代のHBM3の16から倍に増えた。Huaweiの論文の4096本・64チャンネルは、数字の上ではHBM4規格のさらに2倍にあたる。</p><div class="table-scroll"><table class="tw"><tr><th>項目</th><th>HBM4（JEDEC規格）</th><th>Huaweiのカスタム HBM（論文）</th></tr><tr><td>データ信号線</td><td>2048本</td><td>4096本</td></tr><tr><td>独立したチャンネル</td><td>32</td><td>64</td></tr><tr><td>1本あたりの速さ</td><td>最大8Gb/s</td><td>事前プログラムに記載なし</td></tr><tr><td>位置づけ</td><td>業界の標準規格</td><td>研究発表（製品の発表ではない）</td></tr></table></div><p>同じセッションでは、Samsung電子が48GBのHBM4E（1本あたり毎秒17ギガビット）を、中国のメモリ大手CXMT（長鑫存儲技術）が、同じくハイブリッド接合を使ったDDR5メモリを発表する予定だ。HBMの「次の作り方」をめぐる競争が、学会の場でも並んで示される形になる。</p><h2>3．4096本が意味すること、まだ分からないこと</h2><p>メモリが一度に運べるデータの量（帯域）は、おおまかに「信号線の本数×1本あたりの速さ」で決まる。信号線を倍にすれば、同じ速さでも理論上の帯域は倍になる。1本ずつの速さを無理に上げるより、本数を増やすほうが、消費電力を抑えやすい場合もある。</p><p>一方で、本数を増やすほど、配線を引き回す板の面積、接合の精度、熱の逃がし方、電力の設計は難しくなる。Huaweiの論文が「ハイブリッド接合」や「制御回路の組み込み」をうたうのは、この難しさへの答えを示す狙いとみられるが、具体的な方法は発表を待つ必要がある。</p><p>重要なのは、事前プログラムには1本あたりの速さ、容量、消費電力、歩留まり（良品の割合）が書かれていない点だ。4096本という数字だけでは、実際の性能が既存のHBMを上回るかどうかは判断できない。また、学会での研究発表は、量産や出荷の開始を意味しない。</p><h2>4．なぜHuaweiはHBMを自前で作るのか</h2><p>背景にあるのが米国の輸出規制だ。米商務省産業安全保障局（BIS）は2024年12月2日に発効した規則で、一定の性能を超えるHBMを規制対象に加え、中国向けの輸出を国全体で制限した。先端HBMの主な供給元は韓国のSK hynix・Samsung電子と米国のMicron Technologyで、中国企業は先端品を海外から調達しにくくなった。</p><p>Huaweiは2025年9月18日の自社イベント「Huawei Connect 2025」で、AIチップ「Ascend 950」向けに、2種類の独自HBM「HiBL 1.0」と「HiZQ 2.0」を用意すると発表した。HiBL 1.0は「HBM3EやHBM4Eより費用対効果が高い低コスト品」と説明され、Ascend 950PR（2026年1〜3月に提供予定）に使う。HiZQ 2.0は容量144GB、帯域は毎秒4TBで、学習向けのAscend 950DT（2026年10〜12月に提供予定）に使うとしている。</p><img src="fig03.png" alt="図3：規制から自社開発、学会発表まで"><p>今回の学会論文が、これらの製品とどう関係するのかは、事前プログラムからは分からない。報道では、HiBL 1.0を載せた製品の発表も伝えられているが、Huaweiは独自HBMの製造方法や製造委託先を明らかにしていない。</p><h2>5．Nasdaq Whyの視点：投資家が確かめたいこと</h2><p>今回の発表は、AI半導体の競争が「計算チップ」から「メモリと実装（チップのつなぎ方）」に広がっていることを示す。米国株の投資家にとっては、次の点を分けて見ることが大切だ。</p><ul><li>HBM大手（SK hynix・Samsung電子・Micron）：中国向けの先端HBMはすでに規制で制限されており、Huaweiの研究発表だけで足元の業績が変わるわけではない。量産の実績と顧客の採用が出てから評価したい。</li><li>製造装置：ハイブリッド接合は、HBMの次の世代で使われる候補の技術とされる。どの装置メーカーの機械が中国で使われるかは、規制の対象とも関わるため、各社の開示を確認したい。</li><li>中国の自前化の速さ：歩留まり、実際の速さ、消費電力、量産の時期と量が、2月の発表と今後の製品でどこまで示されるかが焦点になる。</li></ul><p>4096本という数字は目を引くが、性能の決め手は信号線の本数だけではない。数字の大きさではなく、量産できるかどうかを追っていきたい。</p>
+<p>次回：先端パッケージング特集（CoWoS・ABF基板など）で、AIチップを「つなぐ技術」を図解します</p>
+<h2>本記事は公開情報に基づく産業・技術動向の分析であり、特定の金融商品の購入・売却を推奨するものではありません。</h2><ul></ul>
+<h2>出典</h2><ul class="lead"><li><a href="https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027AdvanceProgram.pdf" target="_blank" rel="noopener">ISSCC 2027 事前プログラム（2026年11月26日版）セッション22・論文22.6</a></li><li><a href="https://www.businesswire.com/news/home/20250416843598/en" target="_blank" rel="noopener">JEDEC：HBM4規格 JESD270-4 の発表（2025年4月16日）</a></li><li><a href="https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech" target="_blank" rel="noopener">Huawei：Huawei Connect 2025 基調講演（2025年9月18日）</a></li><li><a href="https://www.govinfo.gov/content/pkg/FR-2024-12-05/html/2024-28270.htm" target="_blank" rel="noopener">米連邦官報：BIS 先端計算・半導体製造装置とHBMの規則（2024年12月5日公示、12月2日発効）</a></li></ul>
+<div class="notice">※情報提供のみ。投資判断はご自身でお願いします。※Nasdaq Whyは独立した情報メディアです。Nasdaq, Inc.およびその関連会社とは関係ありません。</div>
+</article>
+<!--seo-related--><section class="related"><h2>関連記事</h2><ul><li><a href="/feature/inference-broadcom/">AIの推論は安くなっているのに、なぜ設備への支出は増えるのか？――ブロードコムのAI半導体は1年で約3倍に（ニュースの深掘り）</a></li></ul></section><!--/seo-related-->
+<div class="nav"><a href="../../">← 記事の一覧へ</a></div>
+
+</div></main>
+<footer><div class="wrap">
+<p>※情報提供のみ。投資判断はご自身でお願いします。※Nasdaq Whyは独立した情報メディアです。Nasdaq, Inc.およびその関連会社とは関係ありません。</p>
+<p>数値は無料の公開データ（Yahoo Finance）から自動で取得しています。正確さには注意していますが、誤りや遅れを含む場合があります。</p>
+<p class="links"><a href="../../about/">このサイトについて</a>　<a href="../../privacy/">プライバシーポリシー</a>　<a href="../../contact/">お問い合わせ</a></p>
+<p>&copy; 2026 NasdaqWhy</p>
+</div></footer>
+</body>
+</html>
